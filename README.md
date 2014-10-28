@@ -3,8 +3,13 @@ CodeSprint
 
 one week - one algorithms or data structure.
 The list of projects:
-1) Алгоритм Евклида вычисления НОД двух чисел.
-2) Сортировка массива пузырьком.
-3) Сортировка подсчетом.
-4) Сортировка массива: быстрая сортировка.
-5) Сортировка массива: сортировка с помощью кучи.
+
+1) Euclidean algorithm for GCD.
+
+2) Bubble sort.
+
+3) Counting sort.
+
+4) Quick sort.
+
+5) Heap sort.
