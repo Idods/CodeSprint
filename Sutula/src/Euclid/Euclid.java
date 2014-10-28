@@ -33,6 +33,14 @@ public class Euclid {
         return b == 0 ? a : b;
     }
 
+    //Для декількох елементів
+    public static int findGCD(int a, Integer... args) {
+        for (Integer b : args) {
+            a = findGCDIterable(a, b);
+        }
+        return a;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter two numbers for finding their GSD");
@@ -43,6 +51,7 @@ public class Euclid {
         System.out.println("Second method: " + findGCDS(a, b));
         System.out.println("Third method: " + findGCDIterable(a, b));
 
+        System.out.println("For several elements: " + findGCD(252, 105, 21));
         sc.close();
     }
 }
