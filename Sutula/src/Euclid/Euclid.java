@@ -17,7 +17,6 @@ public class Euclid {
             return findGCD(b - a, a);
     }
 
-
     //Другим способом реалізовано
     public static int findGCDS(int a, int b) {
         if (a == 0) return b;
@@ -32,6 +31,13 @@ public class Euclid {
                 b = b - a;
         return b == 0 ? a : b;
     }
+
+    public static int findGCDMod(int a, int b) {
+        if (b == 0)
+            return a;
+        return (findGCDMod(b, a % b));
+    }
+
 
     //Для декількох елементів
     public static int findGCD(int a, Integer... args) {
@@ -50,6 +56,7 @@ public class Euclid {
         System.out.println("First method: " + findGCD(a, b));
         System.out.println("Second method: " + findGCDS(a, b));
         System.out.println("Third method: " + findGCDIterable(a, b));
+        System.out.println("Fourth method: " + findGCDMod(a, b));
 
         System.out.println("For several elements: " + findGCD(252, 105, 21));
         sc.close();
