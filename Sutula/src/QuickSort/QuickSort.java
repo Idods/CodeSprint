@@ -36,10 +36,13 @@ public class QuickSort {
             sort(mas, i, right);
     }
 
+    public static <E extends Comparable> void sort(E[] mas) {
+        sort(mas, 0, mas.length - 1);
+    }
 
     public static void main(String[] args) {
         Integer[] mas = {1, 12, 5, 26, 7, 14, 3, 7, 2};
-        sort(mas, 0, mas.length - 1);
+        sort(mas);
         System.out.println(Arrays.toString(mas));
 
     }

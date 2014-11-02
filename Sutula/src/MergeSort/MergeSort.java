@@ -8,8 +8,9 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static <E extends Comparable> void sort(E[] mas, int left, int right) {
-        if (right - left == 0)
+        if (right == left)
             return;
+
         sort(mas, left, (right + left) / 2);
         sort(mas, (right + left) / 2 + 1, right);
 
@@ -27,21 +28,25 @@ public class MergeSort {
         }
 
         while (currIndex < merged.length)
-            if (currFirstMas <= (right + left) / 2) {
+            if (currFirstMas <= (right + left) / 2)
                 merged[currIndex++] = mas[currFirstMas++];
-            } else {
+            else
                 merged[currIndex++] = mas[currSecondMas++];
-            }
+
 
         for (int i = 0; i < merged.length; i++)
             mas[left + i] = merged[i];
 
     }
 
+    public static <E extends Comparable> void sort(E[] mas) {
+        sort(mas, 0, mas.length - 1);
+    }
+
     public static void main(String[] args) {
         Integer[] mas = {45, 23, 11, 89, 77, 98, 4, 28, 65, 43};
 
-        sort(mas, 0, mas.length - 1);
+        sort(mas);
 
         System.out.println(Arrays.toString(mas));
     }
