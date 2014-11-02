@@ -17,3 +17,5 @@ The list of projects:
 6) Insertion sort.
 
 7) Merge sort.
+
+8) Selection sort.
