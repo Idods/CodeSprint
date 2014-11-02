@@ -13,3 +13,7 @@ The list of projects:
 4) Quick sort.
 
 5) Heap sort.
+
+6) Insertion sort.
+
+7) Merge sort.
