@@ -12,14 +12,18 @@ public class BubbleSort {
             isChanged = false;
             for (int i = 1; i < mas.length; i++) {
                 if (mas[i].compareTo(mas[i - 1]) < 0) {
-                    E tmp = mas[i];
-                    mas[i] = mas[i - 1];
-                    mas[i - 1] = tmp;
+                    swap(mas, i, i - 1);
                     isChanged = true;
                 }
 
             }
         } while (isChanged);
+    }
+
+    public static <E extends Comparable> void swap(E[] mas, int first, int second) {
+        E tmp = mas[first];
+        mas[first] = mas[second];
+        mas[second] = tmp;
     }
 
     public static void main(String[] args) {
